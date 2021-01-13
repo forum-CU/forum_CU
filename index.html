@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<!--"Varela Round"-->
+
+<head>
+  <script src="jquery-3.5.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <title>Forum</title>
+</head>
+<style>
+    #rectangle {
+      width: 200px;
+      height: 100px;
+      background: blue;
+    }
+
+    #bara {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: #09C5B8;
+      text-align: center;
+      color: white;
+      line-height: 50px;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #757D7D;
+      background: #FAF7E6;
+      font-size: 20x;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+      display: inline-block;
+      background: #F1F1D8;
+    }
+
+    .tags {
+      display: inline-block;
+      border-radius: 30px 10px 10px 30px;
+      padding: 0px 5px 0px 5px;
+      height: 25px;
+      margin-right: 15px;
+      color: white;
+    }
+
+    .postare {
+      width: 88%;
+      height: 105px;
+      padding: 10px;
+      background: #07AEA3;
+      color: white;
+      line-height: 20px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .taguri {
+      width: 88%;
+      height: 15px;
+      padding: 10px;
+      border-radius: 0px 0px 10px 10px;
+      background: #E5E5CD;
+      margin-top: 0;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .postare i {
+      display: inline-block;
+      text-align: left;
+      margin-left: 15px;
+    }
+
+    .postare p {
+      display: inline-block;
+      text-align: left;
+      line-height: 150%;
+      margin-left: 15px;
+    }
+
+    .rasp {
+      display: inline-block;
+      color: black;
+      position: absolute;
+      font-size: 14px;
+      right: 10px;
+    }
+
+    nav {
+      margin: 27px auto 0;
+      position: relative;
+      margin-top: 80px;
+      margin-bottom: 20px;
+      width: 310px;
+      height: 35x;
+      background-color: #078179;
+      border-radius: 8px;
+      font-size: 0;
+    }
+
+    nav a {
+      line-height: 35px;
+      height: 100%;
+      font-size: 15px;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav .animation {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      z-index: 0;
+      transition: all .5s ease 0s;
+      border-radius: 8px;
+    }
+
+    a:nth-child(1) {
+      width: 100px;
+    }
+
+    a:nth-child(2) {
+      width: 110px;
+    }
+
+    a:nth-child(3) {
+      width: 100px;
+    }
+
+    nav .start-home,
+    a:nth-child(1):hover~.animation {
+      width: 100px;
+      left: 0;
+      background-color: #0D983E;
+    }
+
+    nav .start-about,
+    a:nth-child(2):hover~.animation {
+      width: 110px;
+      left: 100px;
+      background-color: #3B73DF;
+
+    }
+
+    nav .start-blog,
+    a:nth-child(3):hover~.animation {
+      width: 100px;
+      left: 210px;
+      background-color: #DF3B3B;
+    }
+
+  </style>
+
+<body>
+
+<div id="bara">... Bara de sus a site-ului ...</div>
+<!--<h1 style="margin-top:60px; margin-bottom: 30px; text-align: center; ">Forum</h1>-->
+<nav>
+  <a href="#comentarii">Comentarii</a>
+  <a href="#resurse">Resurse</a>
+  <a href="#meta">Meta</a>
+  <div class="animation start-home"></div>
+</nav>
+
+<center>
+  <div class="postare"> <i class="fa fa-user-circle-o" style="font-size:60px; color: #FFFFFF;"></i>
+    <p><span style="color: #E1E1E1;">utilizator18927 · ieri</span><br>
+      <span><b>PHET Simulators - Ajutor la circuitele de alternativ</b></span>
+      <br><span style="color: #E7E7E7;">Bună! Am o întebare legată de simulatoarele PHET Colorado. Aș dori să simulez niște circuite de curent alternativ și am o nedumerire legată de... </span>
+    </p>
+  </div>
+  <div class="taguri">
+    <div class="tags" style="border-color:green; background-color: #3B73DF;">
+      <span class="dot"></span>Resurse
+    </div>
+    <div class="tags" style="border-color:red; background-color: #DF3BA6;">
+      <span class="dot"></span>Fizică
+    </div>
+    <div class="rasp">
+      💬 5 răspunsuri
+    </div>
+  </div>
+
+
+  <div class="postare"> <i class="fa fa-user-circle-o" style="font-size:60px; color: #FFFFFF;"></i>
+    <p><span style="color: #E1E1E1;">noaptebuna293 · acum 3 zile </span><br>
+      <span><b>Sugestie - adăugați Geogebra în lista de resurse!</b></span>
+      <br><span style="color: #E7E7E7;">Aș sugera să adăugați programul Geogebra la indexul de resurse! Este un program în care... </span>
+    </p>
+  </div>
+  <div class="taguri">
+    <div class="tags" style="border-color:red; background-color: #DF3B3B;">
+      <span class="dot"></span>Meta
+    </div>
+    <div class="tags" style="border-color:green; background-color: #DF993B;">
+      <span class="dot"></span>Sugestii
+    </div>
+    <div class="tags" style="border-color:green; background-color: #3B73DF;">
+      <span class="dot"></span>Resurse
+    </div>
+    <div class="rasp">
+      💬 2 răspunsuri
+    </div>
+  </div>
+
+  <div class="postare"> <i class="fa fa-user-circle-o" style="font-size:60px; color: #FFFFFF;"></i>
+    <p><span style="color: #E1E1E1;">utilizator18927 · ieri</span><br>
+      <span><b>[Comentarii la Lectia "Hidrocarburi aromatice"]</b></span>
+      <br><span style="color: #E7E7E7;">Heyyy! Nu am înțeles exact la ce se referă mentorul atunci când spune ”Catenă laterală saturată”... Poate cineva să-mi explice ce înseamnă asta? </span>
+    </p>
+  </div>
+  <div class="taguri">
+    <div class="tags" style="background-color: #0D983E;">
+      <span class="dot"></span>Comentarii
+    </div>
+    <div class="tags" style="background-color: #40640B;">
+      <span class="dot"></span>Chimie
+    </div>
+    <div class="rasp">
+      💬 2 răspunsuri
+    </div>
+  </div>
+
+  <div class="postare" style="background:#838383;"> <i class="fa fa-user-circle-o" style="font-size:60px; color: #FFFFFF;"></i>
+    <p><span style="color: #E1E1E1;">chessslatt · acum 4 luni </span><br>
+      <span><b>Cum pot să accesez videoclipul X???</b></span>
+      <br><span style="color: #E7E7E7;">Sunt nedumerit?? Ajutor!! </span>
+    </p>
+  </div>
+  <div class="taguri">
+    <div class="tags" style="background-color: #9C0000;">
+      <span class="dot"></span>Închisă [Duplicat]
+    </div>
+    <div class="rasp">
+      💬 10 răspunsuri
+    </div>
+  </div>
+
+  <!--
+De adaugat inca vreo 3
+-->
+
+
+  <div>
+    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+  </div>
+
+</body>
+
+</html>
